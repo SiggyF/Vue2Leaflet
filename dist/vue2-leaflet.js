@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("lodash"), require("leaflet"), require("vue"));
+		module.exports = factory(require("_"), require("L"), require("Vue"));
 	else if(typeof define === 'function' && define.amd)
-		define(["lodash", "leaflet", "vue"], factory);
+		define(["_", "L", "Vue"], factory);
 	else if(typeof exports === 'object')
-		exports["Vue2Leaflet"] = factory(require("lodash"), require("leaflet"), require("vue"));
+		exports["Vue2Leaflet"] = factory(require("_"), require("L"), require("Vue"));
 	else
-		root["Vue2Leaflet"] = factory(root["lodash"], root["leaflet"], root["vue"]);
+		root["Vue2Leaflet"] = factory(root["_"], root["L"], root["Vue"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_32__, __WEBPACK_EXTERNAL_MODULE_33__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -134,7 +134,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 3 */
 /***/ function(module, exports) {
 
-	module.exports = require("lodash");
+	module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
 
 /***/ },
 /* 4 */
@@ -1310,13 +1310,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 32 */
 /***/ function(module, exports) {
 
-	module.exports = require("leaflet");
+	module.exports = __WEBPACK_EXTERNAL_MODULE_32__;
 
 /***/ },
 /* 33 */
 /***/ function(module, exports) {
 
-	module.exports = require("vue");
+	module.exports = __WEBPACK_EXTERNAL_MODULE_33__;
 
 /***/ }
 /******/ ])
