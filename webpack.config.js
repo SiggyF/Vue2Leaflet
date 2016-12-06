@@ -8,8 +8,8 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'vue2-leaflet.js',
-    library: ["Vue2Leaflet"],
-    libraryTarget: "var"
+    library: ['Vue2Leaflet'],
+    libraryTarget: 'umd'
   },
   externals: [nodeExternals()],
   resolveLoader: {
@@ -49,14 +49,14 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
+    module.exports.devtool = '#source-map';
   // http://vuejs.github.io/vue-loader/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
+        NODE_ENV: 'production'
       }
     }),
     new webpack.optimize.OccurenceOrderPlugin()
-  ])
+  ]);
 }
