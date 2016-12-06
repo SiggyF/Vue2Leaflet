@@ -9,7 +9,7 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'vue2-leaflet.js',
     library: ["Vue2Leaflet"],
-    libraryTarget: "umd"
+    libraryTarget: "var"
   },
   externals: [nodeExternals()],
   resolveLoader: {
