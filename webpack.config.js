@@ -1,6 +1,5 @@
 var path = require('path')
 var webpack = require('webpack')
-var nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: './src/main.js',
@@ -8,10 +7,15 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'vue2-leaflet.js',
-    library: ["Vue2Leaflet"],
-    libraryTarget: "umd"
+    library: ['Vue2Leaflet'],
+    libraryTarget: 'var'
   },
-  externals: [nodeExternals()],
+  externals: {
+    jquery: 'jQuery',
+    lodash: '_',
+    vue: 'Vue',
+    leaflet: 'L'
+  },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
   },
